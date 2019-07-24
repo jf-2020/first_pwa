@@ -46,6 +46,9 @@ class Today extends Component {
             .catch(error => {
                 console.log(error)
             });
+    }
+
+    componentDidMount() {
         // query the API every 10 seconds
         setInterval(() => {
             axios.get('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD')
